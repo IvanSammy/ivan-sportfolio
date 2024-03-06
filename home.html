@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avo_Maizing</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <nav>
+    <a href="home.html">Home</a>
+    <a href="about - home.html">About</a>
+	
+    
+  </nav> -->
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avo-Maizing</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about3.html">About</a>
+    <div class="dropdown">
+    <button class="dropbtn">Login</button>
+      <div class="dropdown-content">
+        <a href="farmerreg.html">Farmer Login</a>
+        <a href="manufacturerreg.html">Manufacturer Login</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- Your main content goes here -->
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* Add your existing styles here */
+
+    .slider-container {
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 1280px;
+      height: auto;
+    }
+
+    /* Navigation for the slider */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+	
+	/* Add this to your existing styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>All Varieties Available</h1>
+  </header>
+
+  <nav>
+    <!-- Your navigation links go here -->
+  </nav>
+
+  <div class="slider-container">
+    <div class="slides">
+      <div class="slide">
+        <img src="water.jpg" alt="Avocado Variety 1">
+      </div>
+      <div class="slide">
+        <img src="avocados.jpg" alt="Avocado Variety 2">
+		</div>
+		<div class="slide">
+		<img src="avocado-9.jpg" alt="Avocado Variety 3">
+		</div>
+		<div class="slide">
+		<img src="avocados.jpg" alt="Avocado Variety 4">
+      </div>
+	  <div class="slide">
+	  <img src="Fresh.jpg" alt="Avocado Variety 5">
+	  </div>
+	  <div class="slide">
+	  <img src="smooth.jpg" alt="Avocado Variety 6">
+	  </div>
+	  <div class="slide">
+	  <img src="export.jpg" alt="Avocado Variety 7">
+	  </div>
+      <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Navigation buttons for the slider -->
+    <div class="prev" onclick="prevSlide()">&#10094;</div>
+    <div class="next" onclick="nextSlide()">&#10095;</div>
+  </div>
+
+  <!-- Your main content goes here -->
+   <footer>
+    <div class="social-icons">
+      <a href="#" target="_blank"><img src="instagram.png" alt="Instagram" width="50px" height="50px"></a>
+      <a href="#" target="_blank"><img src="twitter.png" alt="Twitter" width="50px" height="50px" ></a>
+      <a href="#" target="_blank"><img src="linkedin.png" alt="LinkedIn" width="50px" height="50px"></a>
+      <a href="#" target="_blank"><img src="facebook.png" alt="Facebook" width="50px" height="50px"></a>
+    </div>
+    <p>&copy; 2023 Avo-Maizing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+
+      if (index > totalSlides) {
+        slideIndex = 1;
+      }
+
+      if (index < 1) {
+        slideIndex = totalSlides;
+      }
+
+      const translateValue = -100 * (slideIndex - 1) + '%';
+      slides.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    function prevSlide() {
+      showSlide(slideIndex -= 1);
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex += 1);
+    }
+
+    // Automatically advance slides every 5 seconds
+    setInterval(function() {
+      nextSlide();
+    }, 5000);
+	 
+  </script>
+  <script src="script.js"></script>
+  
+  
+</body>
+</html>
